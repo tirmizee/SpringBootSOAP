@@ -1,0 +1,13 @@
+http://localhost:8080/ws
+Request
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+				  xmlns:gs="http://tirmizee.com/spring/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <gs:getCountryRequest>
+         <gs:name>Spain</gs:name>
+      </gs:getCountryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+http://localhost:8888/ws/countries.wsdl
