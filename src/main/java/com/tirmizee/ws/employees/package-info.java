@@ -5,5 +5,5 @@
 // Generated on: 2019.06.03 at 05:48:33 AM ICT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://tirmizee.com/ws/countries", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.tirmizee.ws.countries;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://tirmizee.com/ws/employees")
+package com.tirmizee.ws.employees;

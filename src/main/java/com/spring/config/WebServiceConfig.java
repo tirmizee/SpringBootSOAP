@@ -35,8 +35,23 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 	 
 	@Bean
+	public DefaultWsdl11Definition employees(XsdSchema employeeSchema) {
+	    DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+	    wsdl11Definition.setPortTypeName("CountriesPort");
+	    wsdl11Definition.setLocationUri("/ws");
+	    wsdl11Definition.setTargetNamespace("http://tirmizee.com/ws/employees"); 
+	    wsdl11Definition.setSchema(employeeSchema);
+	    return wsdl11Definition;
+	}
+	
+	@Bean
 	public XsdSchema countriesSchema() {
-	    return new SimpleXsdSchema(new ClassPathResource("countries.xsd"));
+	    return new SimpleXsdSchema(new ClassPathResource("xsd/countries.xsd"));
+	}
+	
+	@Bean
+	public XsdSchema employeeSchema() {
+	    return new SimpleXsdSchema(new ClassPathResource("xsd/employee.xsd"));
 	}
 	
 }
