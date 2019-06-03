@@ -6,11 +6,10 @@
 //
 
 
-package com.tirmizee.ws.countries;
+package com.tirmizee.ws.user;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="country" type="{http://tirmizee.com/ws/countries}country"/>
+ *         &lt;element name="userId" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "country"
+    "userId"
 })
-@XmlRootElement(name = "getCountryResponse")
-public class GetCountryResponse {
+@XmlRootElement(name = "getUserRequest")
+public class GetUserRequest {
 
-    @XmlElement(required = true)
-    protected Country country;
+    protected long userId;
 
     /**
-     * Gets the value of the country property.
+     * Gets the value of the userId property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Country }
-     *     
      */
-    public Country getCountry() {
-        return country;
+    public long getUserId() {
+        return userId;
     }
 
     /**
-     * Sets the value of the country property.
+     * Sets the value of the userId property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Country }
-     *     
      */
-    public void setCountry(Country value) {
-        this.country = value;
+    public void setUserId(long value) {
+        this.userId = value;
     }
 
 }

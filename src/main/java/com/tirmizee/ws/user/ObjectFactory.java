@@ -6,7 +6,7 @@
 //
 
 
-package com.tirmizee.ws.countries;
+package com.tirmizee.ws.user;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.tirmizee.ws.countries package. 
+ * generated in the com.tirmizee.ws.user package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,34 +30,50 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.tirmizee.ws.countries
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.tirmizee.ws.user
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link GetCountryRequest }
+     * Create an instance of {@link GetUserResponse }
      * 
      */
-    public GetCountryRequest createGetCountryRequest() {
-        return new GetCountryRequest();
+    public GetUserResponse createGetUserResponse() {
+        return new GetUserResponse();
     }
 
     /**
-     * Create an instance of {@link GetCountryResponse }
+     * Create an instance of {@link UserResponse }
      * 
      */
-    public GetCountryResponse createGetCountryResponse() {
-        return new GetCountryResponse();
+    public UserResponse createUserResponse() {
+        return new UserResponse();
     }
 
     /**
-     * Create an instance of {@link Country }
+     * Create an instance of {@link GetUserRequest }
      * 
      */
-    public Country createCountry() {
-        return new Country();
+    public GetUserRequest createGetUserRequest() {
+        return new GetUserRequest();
+    }
+
+    /**
+     * Create an instance of {@link UserRequest }
+     * 
+     */
+    public UserRequest createUserRequest() {
+        return new UserRequest();
+    }
+
+    /**
+     * Create an instance of {@link User }
+     * 
+     */
+    public User createUser() {
+        return new User();
     }
 
 }

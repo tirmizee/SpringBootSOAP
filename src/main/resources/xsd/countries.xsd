@@ -19,7 +19,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
+    
     <xs:complexType name="country">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>

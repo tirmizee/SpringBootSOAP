@@ -59,11 +59,11 @@
 		    <artifactId>httpclient</artifactId>
     	</dependency>
     	
-   <!--  	<dependency>
+        <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0.2</version>
-		</dependency> -->
+		</dependency>
 		
 		<dependency>
 		    <groupId>com.zaxxer</groupId>
@@ -91,7 +91,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
+					<schemaDirectory>${project.basedir}/src/main/resources/xsd/</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>

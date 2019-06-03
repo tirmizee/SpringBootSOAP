@@ -6,7 +6,7 @@
 //
 
 
-package com.tirmizee.ws.countries;
+package com.tirmizee.ws.user;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="country" type="{http://tirmizee.com/ws/countries}country"/>
+ *         &lt;element name="userResponse" type="{http://tirmizee.com/ws/user}userResponse"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "country"
+    "userResponse"
 })
-@XmlRootElement(name = "getCountryResponse")
-public class GetCountryResponse {
+@XmlRootElement(name = "getUserResponse")
+public class GetUserResponse {
 
     @XmlElement(required = true)
-    protected Country country;
+    protected UserResponse userResponse;
 
     /**
-     * Gets the value of the country property.
+     * Gets the value of the userResponse property.
      * 
      * @return
      *     possible object is
-     *     {@link Country }
+     *     {@link UserResponse }
      *     
      */
-    public Country getCountry() {
-        return country;
+    public UserResponse getUserResponse() {
+        return userResponse;
     }
 
     /**
-     * Sets the value of the country property.
+     * Sets the value of the userResponse property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Country }
+     *     {@link UserResponse }
      *     
      */
-    public void setCountry(Country value) {
-        this.country = value;
+    public void setUserResponse(UserResponse value) {
+        this.userResponse = value;
     }
 
 }
