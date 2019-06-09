@@ -1,5 +1,7 @@
 package com.spring.config;
 
+import org.apache.ws.security.WSConstants;
+import org.apache.wss4j.dom.handler.WSHandlerConstants;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -7,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.config.annotation.WsConfigurerAdapter;
+import org.springframework.ws.soap.security.wss4j2.Wss4jSecurityInterceptor;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
@@ -23,6 +26,16 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	    servlet.setTransformWsdlLocations(true);
 	    return new ServletRegistrationBean(servlet, "/ws/*");
 	}
+	
+/*	@Bean
+	public Wss4jSecurityInterceptor securityInterceptor() {
+	  Wss4jSecurityInterceptor security = new Wss4jSecurityInterceptor();
+	  security.setSecurementActions(WSHandlerConstants.TIMESTAMP + " " + WSHandlerConstants.USERNAME_TOKEN);
+	  security.setSecurementPasswordType(WSConstants.PW_TEXT);
+	  security.setSecurementUsername("tirmizee");
+	  security.setSecurementPassword("tirmizee");
+	  return security;
+	}*/
 	
 	@Bean
 	public DefaultWsdl11Definition countries(XsdSchema countriesSchema) {

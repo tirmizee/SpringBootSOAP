@@ -12,7 +12,9 @@
     <xs:element name="getUserResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="userResponse" type="users:userResponse"/>
+				<xs:element minOccurs="0" name="messageCode" type="xs:string"/>
+				<xs:element minOccurs="0" name="messageDesc" type="xs:string"/>
+				<xs:element minOccurs="0" name="detail" type="users:user"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
