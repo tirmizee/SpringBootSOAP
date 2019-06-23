@@ -6,10 +6,12 @@
 //
 
 
-package com.tirmizee.ws.user;
+package com.tutorialflix.spring.types.v1;
 
+import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,9 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="messageCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="messageDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="detail" type="{http://tirmizee.com/ws/user}user" minOccurs="0"/>
+ *         &lt;element name="customerID" type="{http://www.w3.org/2001/XMLSchema}integer"/>
+ *         &lt;element name="details" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,87 +39,90 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "messageCode",
-    "messageDesc",
-    "detail"
+    "customerID",
+    "details",
+    "status"
 })
-@XmlRootElement(name = "getUserResponse")
-public class GetUserResponse {
+@XmlRootElement(name = "createCustomerResponse")
+public class CreateCustomerResponse {
 
-    protected String messageCode;
-    protected String messageDesc;
-    protected User detail;
+    @XmlElement(required = true)
+    protected BigInteger customerID;
+    @XmlElement(required = true)
+    protected String details;
+    @XmlElement(required = true)
+    protected String status;
 
     /**
-     * Gets the value of the messageCode property.
+     * Gets the value of the customerID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getCustomerID() {
+        return customerID;
+    }
+
+    /**
+     * Sets the value of the customerID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setCustomerID(BigInteger value) {
+        this.customerID = value;
+    }
+
+    /**
+     * Gets the value of the details property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMessageCode() {
-        return messageCode;
+    public String getDetails() {
+        return details;
     }
 
     /**
-     * Sets the value of the messageCode property.
+     * Sets the value of the details property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMessageCode(String value) {
-        this.messageCode = value;
+    public void setDetails(String value) {
+        this.details = value;
     }
 
     /**
-     * Gets the value of the messageDesc property.
+     * Gets the value of the status property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMessageDesc() {
-        return messageDesc;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * Sets the value of the messageDesc property.
+     * Sets the value of the status property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMessageDesc(String value) {
-        this.messageDesc = value;
-    }
-
-    /**
-     * Gets the value of the detail property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link User }
-     *     
-     */
-    public User getDetail() {
-        return detail;
-    }
-
-    /**
-     * Sets the value of the detail property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link User }
-     *     
-     */
-    public void setDetail(User value) {
-        this.detail = value;
+    public void setStatus(String value) {
+        this.status = value;
     }
 
 }

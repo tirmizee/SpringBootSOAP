@@ -5,5 +5,5 @@
 // Generated on: 2019.06.09 at 09:51:27 PM ICT 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://tirmizee.com/ws/user", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.tirmizee.ws.user;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://spring.tutorialflix.com/types/v1", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.tutorialflix.spring.types.v1;

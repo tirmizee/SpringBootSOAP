@@ -54,21 +54,48 @@
 		    <artifactId>spring-jdbc</artifactId>
 		</dependency>
 		
+		<!-- https://stackoverflow.com/questions/40204589/java-lang-classnotfoundexception-com-sun-xml-wss-xwssecurityexception -->
+		<!-- <dependency>
+	        <groupId>com.sun.xml.wss</groupId>
+	        <artifactId>xws-security</artifactId>
+	        <version>3.0</version>
+	        <exclusions>
+		        <exclusion>
+		            Part of JDK
+		            <groupId>javax.xml.soap</groupId>
+		            <artifactId>saaj-api</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            Part of Java EE
+		            <groupId>javax.mail</groupId>
+		            <artifactId>mail</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            Part of JDK
+		            <groupId>javax.xml.bind</groupId>
+		            <artifactId>jaxb-api</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            Part of JDK
+		            <groupId>javax.xml.stream</groupId>
+		            <artifactId>stax-api</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            Part of JDK
+		            <groupId>javax.xml.crypto</groupId>
+		            <artifactId>xmldsig</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            Part of JDK
+		            <groupId>javax.xml.ws</groupId>
+		            <artifactId>jaxws-api</artifactId>
+		        </exclusion>
+		    </exclusions>
+	    </dependency> 
+		 -->
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.wss4j</groupId>
-		    <artifactId>wss4j-ws-security-common</artifactId>
-		    <version>2.2.2</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.wss4j</groupId>
-		    <artifactId>wss4j-ws-security-dom</artifactId>
-		    <version>2.2.2</version>
 		</dependency>
 		
 		<dependency>

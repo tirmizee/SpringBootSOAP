@@ -6,13 +6,16 @@
 //
 
 
-package com.tirmizee.ws.countries;
+package com.tutorialflix.spring.types.v1;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -25,7 +28,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="errorMessage" type="{http://www.w3.org/2001/XMLSchema}normalizedString"/>
+ *         &lt;element name="errorCode" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +40,56 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name"
+    "errorMessage",
+    "errorCode"
 })
-@XmlRootElement(name = "getCountryRequest")
-public class GetCountryRequest {
+@XmlRootElement(name = "createCustomerFault")
+public class CreateCustomerFault {
 
     @XmlElement(required = true)
-    protected String name;
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    @XmlSchemaType(name = "normalizedString")
+    protected String errorMessage;
+    protected int errorCode;
 
     /**
-     * Gets the value of the name property.
+     * Gets the value of the errorMessage property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getErrorMessage() {
+        return errorMessage;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the errorMessage property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setErrorMessage(String value) {
+        this.errorMessage = value;
+    }
+
+    /**
+     * Gets the value of the errorCode property.
+     * 
+     */
+    public int getErrorCode() {
+        return errorCode;
+    }
+
+    /**
+     * Sets the value of the errorCode property.
+     * 
+     */
+    public void setErrorCode(int value) {
+        this.errorCode = value;
     }
 
 }
